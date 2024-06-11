@@ -62,4 +62,5 @@ def result(place_origin,id_origin):
     
     return render_template("result.html",cord_origin=cord_origin,id_origin=id_origin,KEY_API=KEY_API)
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
